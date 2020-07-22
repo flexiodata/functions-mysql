@@ -4,6 +4,9 @@ image:
   src: 'https://static.flex.io/assets/logos/mysql.png'
   alt: MySQL logo
 
+functions:
+  - path: mysql-import.py
+
 prompts:
   - element: auth
     create_pending_connection: true
