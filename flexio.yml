@@ -1,0 +1,20 @@
+title: MySQL
+description: Functions to access data from MySql
+image:
+  src: 'https://static.flex.io/assets/logos/mysql.png'
+  alt: MySQL logo
+
+prompts:
+  - element: auth
+    create_pending_connection: true
+    connection:
+      connection_type: mysql
+    form_items:
+      - name: mysql-connection
+        value: ''
+  - element: file-chooser
+    connection_form_item_name: mysql-connection
+    form_items:
+      - name: files
+        value: []
+
