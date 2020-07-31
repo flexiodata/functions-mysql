@@ -4,7 +4,7 @@ image:
   src: 'https://static.flex.io/assets/logos/mysql.png'
   alt: MySQL logo
 
-functions:
+installation:
   - path: mysql-import.py
 
 prompts:

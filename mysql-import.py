@@ -36,8 +36,9 @@ def create_functions(flex):
     # create functions for each of the selected tables
     for f in files:
 
-        file_parts = f.split(':/')
-        file_name = file_parts[1]
+        file_name = f.get('name')
+        if file_name is None:
+            continue
 
         function_info = get_function_info(connection, file_name)
         flex.index.remove(function_info['name'])
