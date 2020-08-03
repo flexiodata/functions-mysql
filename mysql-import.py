@@ -7,6 +7,7 @@
 # ---
 
 import base64
+import re
 import mysql.connector
 from mysql.connector import FieldType
 from datetime import *
@@ -84,8 +85,11 @@ def get_function_info(connection, table):
     cursor.close()
 
     # return the function info
+    clean_name = table.lower()
+    clean_name = 'mysql-' + re.sub('[^0-9a-zA-Z]+', '-', clean_name)
+
     info = {}
-    info['name'] = 'mysql-' + table.lower() # TODO: make clean name
+    info['name'] = clean_name
     info['title'] = ''
     info['description'] = ''
     info['task'] = {
